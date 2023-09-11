@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>SampleApp.Benchmarking.CreationBenchmarks-20230909-222225</title>
+<title>SampleApp.Benchmarking.CreationBenchmarks-20230911-093357</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -13,19 +13,20 @@
 </head>
 <body>
 <pre><code>
-BenchmarkDotNet v0.13.8, Windows 10 (10.0.19045.3324/22H2/2022Update)
-Intel Core i7-9750HF CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
-.NET SDK 7.0.306
-  [Host]     : .NET 7.0.9 (7.0.923.32018), X64 RyuJIT AVX2 [AttachedDebugger]
-  DefaultJob : .NET 7.0.9 (7.0.923.32018), X64 RyuJIT AVX2
+BenchmarkDotNet v0.13.8, Windows 10 (10.0.19044.3324/21H2/November2021Update)
+12th Gen Intel Core i5-1245U, 1 CPU, 12 logical and 10 physical cores
+.NET SDK 7.0.304
+  [Host]     : .NET 7.0.7 (7.0.723.27404), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.7 (7.0.723.27404), X64 RyuJIT AVX2
 </code></pre>
 <pre><code></code></pre>
 
 <table>
-<thead><tr><th>Method              </th><th>Mean  </th><th>Error</th><th>StdDev</th><th>Ratio</th><th>RatioSD</th><th>Rank</th><th>Gen0</th><th>Allocated</th><th>Alloc Ratio</th>
+<thead><tr><th>Method                </th><th>Mean  </th><th>Error</th><th>StdDev</th><th>Median</th><th>Ratio</th><th>RatioSD</th><th>Rank</th><th>Gen0</th><th>Allocated</th><th>Alloc Ratio</th>
 </tr>
-</thead><tbody><tr><td>CreateItemsTheClassicalWay</td><td>942.6 ns</td><td>11.73 ns</td><td>9.79 ns</td><td>baseline</td><td></td><td>1</td><td>1.0185</td><td>6.24 KB</td><td></td>
-</tr><tr><td>CreateItemsWithActivator</td><td>153,863.3 ns</td><td>976.29 ns</td><td>865.45 ns</td><td>+16,222%</td><td>1.2%</td><td>2</td><td>10.0098</td><td>62.61 KB</td><td>+903%</td>
+</thead><tbody><tr><td>CreateItemsTheClassicalWay</td><td>754.3 ns</td><td>13.75 ns</td><td>11.48 ns</td><td>757.7 ns</td><td>baseline</td><td></td><td>1</td><td>1.0223</td><td>6.27 KB</td><td></td>
+</tr><tr><td>CreateItemsWithActivatorGood</td><td>1,154.6 ns</td><td>31.06 ns</td><td>89.12 ns</td><td>1,124.0 ns</td><td>+57%</td><td>9.3%</td><td>2</td><td>1.0166</td><td>6.24 KB</td><td>-0%</td>
+</tr><tr><td>CreateItemsWithActivatorBad</td><td>121,478.1 ns</td><td>2,646.46 ns</td><td>7,507.56 ns</td><td>119,207.0 ns</td><td>+15,776%</td><td>5.1%</td><td>3</td><td>10.1318</td><td>62.68 KB</td><td>+900%</td>
 </tr></tbody></table>
 </body>
 </html>

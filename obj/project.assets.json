@@ -1806,8 +1806,8 @@
     },
     "SampleApp/1.0.0": {
       "type": "project",
-      "path": "../FactoryPattern/SampleApp.csproj",
-      "msbuildProject": "../FactoryPattern/SampleApp.csproj"
+      "path": "../../KnowHowSharing/DesignPatterns/Factory/SampleApp/SampleApp.csproj",
+      "msbuildProject": "../../KnowHowSharing/DesignPatterns/Factory/SampleApp/SampleApp.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1817,25 +1817,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sunch\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\z004rhzm\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Munka\\C_Sharp\\Benchmarking\\Benchmarking.csproj",
+      "projectUniqueName": "C:\\Munka\\Sajat\\Benchmarking\\Benchmarking.csproj",
       "projectName": "Benchmarking",
-      "projectPath": "D:\\Munka\\C_Sharp\\Benchmarking\\Benchmarking.csproj",
-      "packagesPath": "C:\\Users\\sunch\\.nuget\\packages\\",
-      "outputPath": "D:\\Munka\\C_Sharp\\Benchmarking\\obj\\",
+      "projectPath": "C:\\Munka\\Sajat\\Benchmarking\\Benchmarking.csproj",
+      "packagesPath": "C:\\Users\\z004rhzm\\.nuget\\packages\\",
+      "outputPath": "C:\\Munka\\Sajat\\Benchmarking\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\sunch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\z004rhzm\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1851,8 +1849,8 @@
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "D:\\Munka\\C_Sharp\\FactoryPattern\\SampleApp.csproj": {
-              "projectPath": "D:\\Munka\\C_Sharp\\FactoryPattern\\SampleApp.csproj"
+            "c:\\Munka\\KnowHowSharing\\DesignPatterns\\Factory\\SampleApp\\SampleApp.csproj": {
+              "projectPath": "c:\\Munka\\KnowHowSharing\\DesignPatterns\\Factory\\SampleApp\\SampleApp.csproj"
             }
           }
         }
@@ -1888,7 +1886,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

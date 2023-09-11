@@ -12,7 +12,7 @@ namespace SampleApp.Benchmarking;
 [Config(typeof(Config))]
 public class CreationBenchmarks
 {
-    private readonly List<Tuple<int,string, Type>> _whatToCreate = new();
+    private readonly List<Tuple<int,string, Type, Type>> _whatToCreate = new();
     private const int _numberOfItems = 100;
 
     public CreationBenchmarks()
@@ -40,7 +40,16 @@ public class CreationBenchmarks
     }
 
     [Benchmark]
-    public void CreateItemsWithActivator()
+    public void CreateItemsWithActivatorGood()
+    {
+        foreach (var item in _whatToCreate)
+        {
+            var elem = Activator.CreateInstance(item.Item4) as IGepeszetElem;
+        }
+    }    
+    
+    [Benchmark]
+    public void CreateItemsWithActivatorBad()
     {
         foreach (var item in _whatToCreate)
         {
@@ -48,7 +57,7 @@ public class CreationBenchmarks
             .GetTypes()
             .Single(t => t.Name == item.Item2);
 
-            var futes = Activator.CreateInstance(type) as Futes;
+            var elem = Activator.CreateInstance(type) as IGepeszetElem;
         }
     }
 
@@ -68,7 +77,7 @@ public class CreationBenchmarks
         };
     }
 
-    private static Type IdToType(int id)
+    private static Type IdToType1(int id)
     {
         return id switch 
         {
@@ -82,6 +91,22 @@ public class CreationBenchmarks
             7 => typeof(IEgyebMegujulo),
             _ => throw new NotImplementedException()
         };
+    }    
+    
+    private static Type IdToType2(int id)
+    {
+        return id switch 
+        {
+            0 => typeof(IFutes).Assembly.GetTypes().Single(t => t.Name == "Futes"),
+            1 => typeof(IHutes).Assembly.GetTypes().Single(t => t.Name == "Hutes"),
+            2 => typeof(IHasznalatiMelegViz).Assembly.GetTypes().Single(t => t.Name == "HasznalatiMelegViz"),
+            3 => typeof(ISzellozes).Assembly.GetTypes().Single(t => t.Name == "Szellozes"),
+            4 => typeof(IVilagitas).Assembly.GetTypes().Single(t => t.Name == "Vilagitas"),
+            5 => typeof(INapelem).Assembly.GetTypes().Single(t => t.Name == "Napelem"),
+            6 => typeof(INapKollektor).Assembly.GetTypes().Single(t => t.Name == "NapKollektor"),
+            7 => typeof(IEgyebMegujulo).Assembly.GetTypes().Single(t => t.Name == "EgyebMegujulo"),
+            _ => throw new NotImplementedException()
+        };
     }
 
     private void CalcWhatToCreate()
@@ -90,7 +115,7 @@ public class CreationBenchmarks
         for (int i = 0; i < _numberOfItems; i++)
         {
             var id = rnd.Next(8);
-            _whatToCreate.Add(new(id,IdToName(id),IdToType(id)));
+            _whatToCreate.Add(new(id,IdToName(id),IdToType1(id), IdToType2(id)));
         }
     }
 

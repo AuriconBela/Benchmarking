@@ -11,8 +11,8 @@
     <PackageReference Include="BenchmarkDotNet" Version="0.13.8" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\FactoryPattern\SampleApp.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="c:\Munka\KnowHowSharing\DesignPatterns\Factory\SampleApp\SampleApp.csproj" />
+	</ItemGroup>
 
 </Project>
